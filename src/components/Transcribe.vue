@@ -59,7 +59,7 @@ export default {
     var _this = this;
     $(function () {
       try {
-        var recognition = new window.SpeechRecognition() || new window.webkitSpeechRecognition();
+        var recognition = new window.webkitSpeechRecognition();
         // var speechRecognitionGrammerList = new window.SpeechGrammarList();
         // speechRecognitionGrammerList.addFromString("#JSGF V1.0;", 1)
       } catch (e) {
