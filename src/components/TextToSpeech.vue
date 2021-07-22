@@ -4,17 +4,17 @@
     <p class="lead text-light mt-4">Select Voice</p>
     <select id="voices" class="form-select bg-secondary text-light"></select>
     <div class="d-flex mt-4 text-light">
-      <div>
-        <p class="lead">Volume</p>
-        <input type="range" min="0" max="1" value="1" step="0.1" id="volume" />
-        <span id="volume-label" class="ms-2">1</span>
-      </div>
-      <div class="mx-5">
+      <div class="">
         <p class="lead">Rate</p>
         <input type="range" min="0.1" max="10" value="1" id="rate" step="0.1" />
         <span id="rate-label" class="ms-2">1</span>
       </div>
-      <div>
+       <div style='visibility:hidden'>
+        <p class="lead">Volume</p>
+        <input type="range" min="0" max="1" value="1" step="0.1" id="volume" />
+        <span id="volume-label" class="ms-2">1</span>
+      </div>
+      <div style='visibility:hidden'>
         <p class="lead">Pitch</p>
         <input type="range" min="0" max="2" value="1" step="0.1" id="pitch" />
         <span id="pitch-label" class="ms-2">1</span>
@@ -25,12 +25,13 @@
       cols="30"
       rows="10"
       placeholder="Type here..."
+      style='margin-top: 25px'
     ></textarea>
     <div>
-      <button id="start" class="btn btn-success mt-5 me-3">Start</button>
-      <button id="pause" class="btn btn-warning mt-5 me-3">Pause</button>
-      <button id="resume" class="btn btn-info mt-5 me-3">Resume</button>
-      <button id="cancel" class="btn btn-danger mt-5 me-3">Cancel</button>
+      <button id="start" class="btn btn-success mt-5 me-3" title='Start'><i class="far fa-play-circle icon"></i></button>
+      <button id="pause" class="btn btn-warning mt-5 me-3" title='Pause'><i class="fas fa-pause-circle icon"></i></button>
+      <button id="resume" class="btn btn-info mt-5 me-3" title='Resume'>Resume</button>
+      <button id="cancel" class="btn btn-danger mt-5 me-3" title='Stop'><i class="far fa-stop-circle icon"></i></button>
     </div>
   </div>
 </template>
@@ -97,12 +98,7 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  margin: 50px auto;
-  color: white;
-  padding: 1rem 1rem 2rem 5rem;
-  background: linear-gradient(30deg, rgb(44, 188, 99), rgb(22, 164, 138) 70%);
-  position: relative;
-  line-height: 3rem;
+.icon{
+  font-size: 120%;
 }
 </style>

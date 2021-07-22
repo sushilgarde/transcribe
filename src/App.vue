@@ -1,22 +1,22 @@
 <template>
   <div id="app">
-    <Navbar/>
-    <MainPage/>
-    <router-view/>
+    <Navbar />
+    <MainPage />
+    <router-view />
   </div>
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
-import MainPage from './components/MainPage.vue'
+import Navbar from "./components/Navbar.vue";
+import MainPage from "./components/MainPage.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Navbar,
-    MainPage
-  }
-}
+    MainPage,
+  },
+};
 </script>
 
 <style>
@@ -25,10 +25,17 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
-  color:black;
+  color: black;
   background: #333744 !important;
 }
-body{
+body {
   background: #333744 !important;
+}
+.container {
+  margin: 50px auto;
+  color: white;
+  padding: 2rem;
+  background: linear-gradient(30deg, rgb(44, 188, 99), rgb(22, 164, 138) 70%);
+  position: relative;
 }
 </style>

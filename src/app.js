@@ -11,7 +11,8 @@ const server = http.createServer(app);
 
 
 app.use('/', serveStatic(path.join(__dirname, '../dist')));
-
+app.use('/transcribe', serveStatic(path.join(__dirname, '../dist')));
+app.use('/translate', serveStatic(path.join(__dirname, '../dist')));
 
 server.listen(PORT, function(){
   return console.log('Running on port '+PORT);
