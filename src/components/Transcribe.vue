@@ -1,13 +1,14 @@
 <template>
-  <div class="container">
+  <div  class="container mt-5 bg-dark">
+    <h1 class="text-light">Speech to Text</h1>
     <div class="buttons">
-      <button id="startRecognition" title="Start Recognition">
+      <button id="startRecognition"  class="btn btn-warning mt-5 me-3" title="Start Recognition">
         <i class="far fa-play-circle start-icon"></i>
       </button>
-      <button id="stopRecognition" title="Stop Recognition">
+      <button id="stopRecognition"  class="btn btn-warning mt-5 me-3" title="Stop Recognition">
         <i class="fas fa-stop-circle stop-icon"></i>
       </button>
-      <button title="Clear" style="float: right" @click="clear()">
+      <button title="Clear"  class="btn btn-warning mt-5 me-3" style="float: right" @click="clear()">
         <i class="fas fa-trash-alt stop-icon"></i>
       </button>
     </div>
@@ -102,7 +103,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 html {
   font-size: 10px;
 }
@@ -126,7 +127,6 @@ p {
   border-color: transparent #efe4e4;
 }
 .container {
-  max-width: 500px;
   margin: 50px auto;
   color: white;
   padding: 1rem 1rem 2rem 5rem;
@@ -138,8 +138,6 @@ p {
 .stop-icon {
   font-size: 150%;
   color: red;
-  border-radius: 50%;
-  padding: 2px;
 }
 
 button {

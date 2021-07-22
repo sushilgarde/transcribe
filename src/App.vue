@@ -1,16 +1,20 @@
 <template>
   <div id="app">
-    <Transcribe/>
+    <Navbar/>
+    <MainPage/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Transcribe from './components/Transcribe.vue'
+import Navbar from './components/Navbar.vue'
+import MainPage from './components/MainPage.vue'
 
 export default {
   name: 'App',
   components: {
-    Transcribe
+    Navbar,
+    MainPage
   }
 }
 </script>
@@ -21,7 +25,10 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
-  color: #2c3e50;
-  margin-top: 60px;
+  color:black;
+  background: #333744 !important;
+}
+body{
+  background: #333744 !important;
 }
 </style>
