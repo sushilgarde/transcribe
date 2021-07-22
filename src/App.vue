@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <Speech/>
+    <Transcribe/>
   </div>
 </template>
 
 <script>
-import Speech from './components/Transcribe.vue'
+import Transcribe from './components/Transcribe.vue'
 
 export default {
   name: 'App',
   components: {
-    Speech
+    Transcribe
   }
 }
 </script>
